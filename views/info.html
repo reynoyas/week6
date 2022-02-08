@@ -23,5 +23,14 @@
             {{ @value }}
         </input><br>
     </repeat>
+
+    <h3>Colors</h3>
+    <repeat group="{{ @colors }}" key="{{ @key }}"
+            value="{{ @value }}">
+        <input type="radio" name="colors" value="{{ @key }}">
+        {{ @value }}
+        </input>
+    </repeat>
+
 </body>
 </html>
