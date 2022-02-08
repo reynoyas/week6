@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Info</title>
+</head>
+<body>
+    <h1>Practice Templating</h1>
+    <h2>{{ @title }}</h2>
+    <p>I like {{ @color }}</p>
+
+    <h3>Fruits</h3>
+    <ul>
+    <repeat group="{{ @fruits }}" value="{{ @fruit }}">
+        <li>{{ @fruit }}</li>
+    </repeat>
+    </ul>
+
+    <h3>Dessert Options</h3>
+    <repeat group="{{ @desserts }}" key="{{ @key }}"
+            value="{{ @value }}">
+        <input type="checkbox" value="{{ @key }}">
+            {{ @value }}
+        </input><br>
+    </repeat>
+</body>
+</html>

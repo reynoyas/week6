@@ -19,9 +19,26 @@ require_once ('vendor/autoload.php');
 $f3 = Base::instance();
 
 // Define a default route
-$f3->route('GET /', function (){
+$f3->route('GET /', function ($f3){
+    // Save the data to the "hive"
+    $f3->set("username", "yreynoso");
+    $f3->set("password", sha1("password1"));
+    $f3->set("title", "Working with Template");
+
+    $f3->set("color", "purple");
+    $f3->set("radius", 10);
+
+    // Array Variables
+    $fruits =array('apple', 'orange', 'banana');
+    $f3->set("fruits", $fruits);
+
+    $dessertsOption = array('chocolate'=>'Chocolate Mouse',
+        'vanilla'=>'Vanilla Custard',
+        'strawberry'=>'Strawberry Shortcake');
+    $f3->set("desserts", $dessertsOption);
+
     $view = new Template();
-    echo $view->render('views/home.html');
+    echo $view->render('views/info.html');
 });
 
 // Run fat-free
