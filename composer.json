@@ -1,0 +1,14 @@
+{
+  "name": "yreynoso/328/week6",
+  "description": "Week 6",
+  "license": "open source",
+  "authors": [
+    {
+      "name": "yasairareynoso",
+      "email": "reynoso.yasaira@student.greenriver.edu"
+    }
+  ],
+  "require": {
+    "bcosca/fatfree-core": "dev-master"
+  }
+}
